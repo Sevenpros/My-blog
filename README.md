@@ -1,24 +1,39 @@
-# README
+# My Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project involves a blog where a user can login, add post, comment and like other user's post
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- SQL
 
-* System dependencies
+## Getting Started
 
-* Configuration
+- Clone repository [link](https://github.com/Sevenpros/My-blog).
+- Change directory into project
+- Run `ruby main.rb`
 
-* Database creation
+## Authors
 
-* Database initialization
+👤 **Seth Bizimana**
 
-* How to run the test suite
+- GitHub: [@Github](https://github.com/Sevenpros)
+- Twitter: [@twitter](https://twitter.com/BizimanaSeth)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/seth-bizimana-2a0624189)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
