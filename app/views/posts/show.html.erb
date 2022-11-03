@@ -1,1 +1,16 @@
 <h2>DISPLAY POST PER ID</h2>
+<div>
+<%= @post.title%><br>
+<%= @post.text%><br>
+Comments: <%= @post.comments_counter%>
+Likes: <%= @post.likes_counter%>
+<ul>
+<h5>Comments section</h5>
+  <% @post.comments.each do | comment |%>
+  <li>
+  <%= comment.author.name%>
+  <%= comment.text%>
+  </li>
+  <% end %>
+</ul>
+</div>

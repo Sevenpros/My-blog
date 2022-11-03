@@ -1,1 +1,24 @@
-<h2>LIST OF POSTS</h2>
+<h2>LIST OF POSTS BY USER</h2>
+<div>
+<img src="<%= @user.photo%>">
+<b><%= @user.name%></b>
+Number of Posts :<%= @user.posts_counter%> <br>
+</div>
+<ul>
+<% @posts.each do | post |%>
+<li><%= post.title%><br>
+<%= post.text%><br>
+Comments: <%= post.comments_counter%>
+Likes: <%= post.likes_counter%>
+<ul>
+<h5>Comments section</h5>
+  <% post.comments.each do | comment |%>
+  <li>
+  <%= comment.author.name%>
+  <%= comment.text%>
+  </li>
+  <% end %>
+</ul>
+</li>
+<% end %>
+</ul>

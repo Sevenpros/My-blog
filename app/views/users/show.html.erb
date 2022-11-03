@@ -1,1 +1,16 @@
 <h2>DISPLAY USER PER ID</h2>
+<div>
+<img src="<%= @user.photo%>">
+<b><%= @user.name%></b>
+Number of Posts :<%= @user.posts_counter%> <br>
+<%= @user.bio%>
+</div>
+<ul>
+<% @user.posts.each do | post |%>
+<li><%= post.title%><br>
+<%= post.text%><br>
+Comments: <%= post.comments_counter%>
+Likes: <%= post.likes_counter%>
+</li>
+<% end %>
+</ul>
