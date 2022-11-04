@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
+  before_validation :set_defaults
   validates :title, presence: true
   validates :title, length: { maximum: 250 }
   validates :comments_counter, numericality: { only_integer: true }
@@ -16,5 +17,12 @@ class Post < ApplicationRecord
 
   def last_five_comments
     comments.last(5).reverse
+  end
+
+  private
+
+  def set_defaults
+    self.comments_counter = 0
+    self.likes_counter = 0
   end
 end
