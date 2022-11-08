@@ -6,7 +6,13 @@ Comments: <%= @post.comments_counter%>
 Likes: <%= @post.likes_counter%>
 <ul>
 <h5>Comments section</h5>
-  <% @post.comments.each do | comment |%>
+<button type="button">
+<%= link_to "New comment", new_user_post_comment_path(@post.author, @post) %>
+</button>
+<button type="button">
+<%= button_to "Like Post", like_path(@post.author, @post) %>
+</button>
+  <% @post.comments.includes(:author).each do | comment |%>
   <li>
   <%= comment.author.name%>
   <%= comment.text%>

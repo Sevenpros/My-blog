@@ -1,7 +1,7 @@
 <h2>DISPLAY USER PER ID</h2>
 <div>
-<img src="<%= @user.photo%>">
-<b><%= @user.name%></b>
+<img src="<%= @user.photo %>">
+<b><%= link_to @user.name, user_posts_path(@user)%></b>
 Number of Posts :<%= @user.posts_counter%> <br>
 <%= @user.bio%>
 </div>

@@ -1,5 +1,5 @@
 <h2>COMMENTS SECTION </h2>
-<%= form_with model: Comment.new, url: user_post_comments_path(post_id: params[:post_id], user_id: params[:user_id]) do |f| %>
+<%= bootstrap_form_with model: Comment.new, url: user_post_comments_path(post_id: params[:post_id], user_id: params[:user_id]) do |f| %>
 <%= f.text_area :text %>
   <%= f.submit %>
 <% end %>

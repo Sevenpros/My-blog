@@ -38,10 +38,8 @@ gem 'jbuilder'
 gem 'ffi', '~> 1.15', '>= 1.15.5'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 gem 'bootstrap', '~> 5.2.2'
@@ -51,8 +49,8 @@ gem 'jquery-rails'
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'bullet'
   gem 'rspec-rails', '~> 4.0.0.beta2'
-
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index new show create] do
       resources :comments, only: %i[new create] 
-      resources :likes, only: %i[new create]
+      # resources :likes, only: %i[like]
     end
   end
+  post "users/:user_id/posts/:post_id/likes", as: :like, to: "likes#like"
 end

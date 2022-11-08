@@ -3,16 +3,19 @@
 <img src="<%= @user.photo%>">
 <b><%= @user.name%></b>
 Number of Posts :<%= @user.posts_counter%> <br>
+<button type="button">
+<%= link_to "Create new Post", new_user_post_path %>
+</button>
 </div>
 <ul>
 <% @posts.each do | post |%>
-<li><%= post.title%><br>
+<li><%= link_to post.title, user_post_path(post.author,post) %><br>
 <%= post.text%><br>
 Comments: <%= post.comments_counter%>
 Likes: <%= post.likes_counter%>
 <ul>
 <h5>Comments section</h5>
-  <% post.comments.each do | comment |%>
+  <% post.comments.includes(:author).each do | comment |%>
   <li>
   <%= comment.author.name%>
   <%= comment.text%>
