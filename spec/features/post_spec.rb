@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :feature do
       visit "/users/#{@user.id}/posts"
     end
     it 'I can see the user\'s profile picture' do
-      expect(page).to have_content "user photo"
+      expect(page).to have_content 'user photo'
     end
     it 'I can see the user\'s username ' do
       expect(page).to have_content @user.name
