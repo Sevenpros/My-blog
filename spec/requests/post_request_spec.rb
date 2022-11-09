@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   context 'GET /index' do
     before(:each) do
-      get '/users/3/posts'
+      @user = User.create(name: 'Tom', photo: 'pic', bio: 'Teacher', posts_counter: 0)
+      @post = Post.create(author: @user, title: 'Title', text: 'Text', likes_counter: 0, comments_counter: 0)  
+      get '/users/741/posts'
     end
     it 'Posts index is successful' do
       expect(response).to have_http_status(:ok)
@@ -21,7 +23,7 @@ RSpec.describe 'Posts', type: :request do
 
   context 'show' do
     before(:each) do
-      get '/users/3/posts/2'
+      get '/users/3/posts/1082'
     end
     it 'Posts index is successful' do
       expect(response).to have_http_status(:ok)

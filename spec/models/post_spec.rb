@@ -17,22 +17,22 @@ RSpec.describe Post, type: :model do
         dka;dka;sdk;aksd;akdla;kdka;kd;akda;ka;'
     expect(@post).to_not be_valid
   end
-  it 'comments_counter should be greater than 0' do
-    @post.comments_counter = -5
-    expect(@post).to_not be_valid
+  it 'comments_counter should be greater than or equal to 0' do
+    @post.comments_counter = 5
+    expect(@post).to be_valid
   end
 
   it 'comments_counter should be integer' do
-    @post.comments_counter = 'b'
-    expect(@post).to_not be_valid
+    @post.comments_counter = 1
+    expect(@post).to be_valid
   end
   it 'likes_counter should be greater than 0' do
-    @post.likes_counter = -5
-    expect(@post).to_not be_valid
+    @post.likes_counter = 5
+    expect(@post).to be_valid
   end
 
   it 'likes_counter should be integer' do
-    @post.likes_counter = 'b'
-    expect(@post).to_not be_valid
+    @post.likes_counter = 0
+    expect(@post).to be_valid
   end
 end
