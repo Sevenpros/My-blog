@@ -1,13 +1,9 @@
 class LikesController < ApplicationController
-  def new
-    @likes = Like.new
-  end
-
-  def create
+  def like
     post = Post.find(params[:post_id])
-    like = Like.new(author: current_user, post:)
+    liking = Like.new(author: current_user, post:)
 
-    if like.save
+    if liking.save
       flash[:success] = 'Liked'
     else
       flash[:error] = 'Something went wrong'
