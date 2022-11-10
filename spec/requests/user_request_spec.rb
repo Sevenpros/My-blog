@@ -21,7 +21,7 @@ RSpec.describe 'Users', type: :request do
 
   context 'show' do
     before(:each) do
-      get '/users/3'
+      get '/users/741'
     end
     it 'Users index is successful' do
       expect(response).to have_http_status(:ok)
