@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.user_page,
+.login_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user_item {
+  display: flex;
+  gap: 8px;
+  border: 1px solid;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.profile {
+  width: 30%;
+}
+
+.profile img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user_desc {
+  width: 100%;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 12px;
+}
+
+.posts_number {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 80vw;
+  justify-content: center;
+  padding: 38px;
+}
+
+.login_form input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  width: 77vw;
+}
+
+.actions {
+  width: 100%;
+}
+
+.actions input {
+  width: 100%;
+}
