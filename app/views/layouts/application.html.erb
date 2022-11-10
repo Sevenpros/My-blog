@@ -12,10 +12,9 @@
   <body>
     <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" href="/ideas">My Blog</a>
+      <a class="nav-link" href="/users">My Blog</a>
     </li>
-  </ul>
-  <p class="navbar-text float-right">
+      <p class="navbar-text float-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -25,6 +24,8 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 </p>
+  </ul>
+
     <p class="notice"><%= notice%> </p>
     <p class="alert"><%= alert%> </p>
     <%= yield %>

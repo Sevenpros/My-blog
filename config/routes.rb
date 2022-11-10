@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   #  root "devise/sessions#new"
+  root to: 'users#index'
   resources :users, only: %i[index show] do
     resources :posts, only: %i[index new show create] do
       resources :comments, only: %i[new create] 
