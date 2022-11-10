@@ -9,11 +9,19 @@ This project involves a blog where a user can login, add post, comment and like 
 
 ## Getting Started
 
-- Clone repository [link](https://github.com/Sevenpros/My-blog).
-- Change directory into project
-- Run `ruby main.rb`
+- Copy and paste the following commands into your terminal to get everything up and running
+  ```
+  git clone https://github.com/Sevenpros/My-blog
+  cd blog_
+  bundle install
+  yarn install
+  rails db:create
+  rails db:migrate
+  rails server
+  visit http://localhost:3000
 
-## Authors
+
+## Author
 
 👤 **Seth Bizimana**
 
@@ -37,3 +45,6 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
